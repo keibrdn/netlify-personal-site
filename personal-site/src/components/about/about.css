@@ -1,0 +1,113 @@
+.pad {
+
+    padding-top: 2%
+}
+
+
+.about__container {
+    display: grid;
+    padding-left:7%;
+    grid-template-columns: 35% 50%;
+    gap: 5%;
+
+}
+
+
+.about__me-image {
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: var(--transition);
+}
+
+.about__me-image:hover {
+    transform: rotate(0);
+}
+
+
+.about__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.about__card {
+    background: transparent;
+    border: 1px solid var(--color-bg);
+    border-radius: 0.5rem;
+    padding: 1.3rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.about__card:hover {
+    background: transparent;
+    border-color: var(--color-bg-variant);
+    cursor:default;
+}
+
+.about__icon {
+    color: var(--color-white);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#about__title {
+    text-align: center;
+    padding-bottom: 3%;
+}
+
+
+.about__content p {
+    margin: 2rem 0 2.6rem;
+    font-weight: 300;
+    color: var(--color--bg);
+}
+
+.title {
+    font-weight: 400;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .about__container{
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding-right: 1rem;
+    }
+
+    .about__me {
+        width: 50%;
+        margin: 2rem auto 4rem;
+    }
+
+    .about__content p {
+        margin: 1rem 0 1.5rem;
+        text-align: center;
+    }
+
+
+}
+
+
+/* MEDIA QUERIES (SMALL DEVICES) */
+@media screen and (max-width: 600px) {
+    .about__me {
+        width: 65%;
+        margin: 0 auto 3rem;
+    }
+
+    .about__cards {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .about__content {
+        text-align: center;
+    }
+
+    .about__content p {
+        margin: 1.5rem 0;
+    }
+}
